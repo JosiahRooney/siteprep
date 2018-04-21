@@ -1,0 +1,105 @@
+@import 'fonts.styl'
+@import 'colors.styl'
+@import 'bootstrap-override.styl'
+
+*
+*:before
+*:after
+  box-sizing inherit
+
+html
+  box-sizing border-box
+
+html
+body
+#wrapper
+  min-height 100vh
+
+body
+  background-color $body
+  font-family $open
+
+img
+  max-width 100%
+  height auto
+
+.stripes
+  background repeating-linear-gradient(
+    45deg,
+    $primary,
+    $primary 10px,
+    $secondary 10px,
+    $secondary 20px
+  )
+  box-shadow inset 0 5px 9px -2px rgba(0,0,0,.4), 0 3px 9px rgba(0,0,0,0.4)
+
+#header
+  background-color #0e0e0e
+  background-image url('../images/grey_wash_wall.png')
+  color white
+  box-shadow 0 0 530px 125px rgba(0,0,0,.4)
+  position relative
+
+  .stripes
+    height 24px
+    border-bottom 4px solid $primary
+
+  .site-logo img
+    max-width 170px
+    padding 10px
+
+  .contact__item
+    padding-top 20px
+
+    > svg
+      color $primary
+      font-size 2rem
+      position relative
+      top 2px
+      margin-right 5px
+
+#menu
+  padding-top 20px
+
+.hero
+  height 800px
+  background-size cover
+  background-position center 100%
+  position relative
+  border-bottom 2px solid $body_accent
+  box-shadow 0 10px 28px 14px rgba(0,0,0,0.4)
+
+  .hero__boxes
+    position absolute
+    bottom -80px
+    width 100%
+
+    .stripes
+      height 14px
+
+  .hero__box
+    padding 0 20px
+
+  .box__inner
+    background-color #fff
+    padding 30px
+    position relative
+
+    h2
+      margin 0 0 20px
+      font-family $nova
+      text-transform uppercase
+      text-align center
+      
+      &::first-letter
+        font-size 1.2em
+
+#primary-content
+  padding-top 70px
+
+#footer
+  margin-top 50px
+  padding-top 150px
+  padding-bottom 20px
+  background-color $body_accent
+  color $body
