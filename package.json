@@ -4,7 +4,8 @@
   "description": "IMPORTANT - PLEASE READ: http://tidythemes.com/concept/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stylus -w ./styles/src/theme.styl -o ./styles/theme.css"
   },
   "author": "",
   "license": "ISC",

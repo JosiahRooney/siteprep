@@ -2,7 +2,7 @@
     </div>
     <footer id="footer" role="contentinfo">
       <div id="copyright" class="container">
-        &copy; 2018 SitePrep, Inc. - CA Lic #822805 - <a href="/disclaimer">Disclaimer</a>
+        &copy; 2018 SitePrep, Inc. - CA Lic #822805 - <a href="/disclaimer">Disclaimer</a> - <a href="/contact">Contact Us</a>
       </div>
     </footer>
   </div>

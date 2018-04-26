@@ -19,16 +19,16 @@
     <header id="header" role="banner">
       <div class="container">
         <div class="row">
-          <section id="branding" class="col-sm-6">
+          <section id="branding" class="col-md-6 col-sm-4">
             <div id="site-title">
               <div class="site-logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo-small.png" alt="SitePrep, Inc. logo">
               </div>
             </div>
           </section>
-          <section class="col-sm-6">
+          <section class="col-md-6 col-sm-8">
             <div class="row">
-              <div class="contact">
+              <div class="contact col-sm-12">
                 <div class="row">
                   <div class="col-sm-4 contact__item phone"><i class="fas fa-mobile-alt"></i> 123-456-7890</div>
                   <div class="col-sm-4 contact__item email"><i class="far fa-envelope"></i> john@siteprep.net</div>
@@ -45,6 +45,5 @@
           </section>
         </div>
       </div>
-      <div class="stripes"></div>
     </header>
     <div id="content">
