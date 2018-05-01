@@ -1,10 +1,17 @@
 <?php get_header(); ?>
 <?php if( get_field('hero_image') ): ?>
-  <section class="hero" style="background-image: url(<?php the_field('hero_image'); ?>)">
+<section class="hero" style="background-image: url(<?php the_field('hero_image'); ?>)">
 <?php else: ?>
-  <section class="hero" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/iron.jpg)">
+<section class="hero" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/iron.jpg)">
 <?php endif; ?>
   <div class="stripes top"></div>
+  <div class="hero__header">
+    <div class="container">
+      <div class="row">
+        <img class="hero__logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="SitePrep, Inc. logo">
+      </div>
+    </div>
+  </div>
   <div class="hero__boxes">
     <div class="container">
       <div class="row">

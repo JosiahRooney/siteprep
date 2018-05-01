@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/theme.css" />
 
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Nova+Flat|Open+Sans" rel="stylesheet">
 
@@ -22,7 +22,7 @@
           <section id="branding" class="col-md-6 col-sm-4">
             <div id="site-title">
               <div class="site-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo-small.png" alt="SitePrep, Inc. logo">
+                <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-small.png" alt="SitePrep, Inc. logo"></a>
               </div>
             </div>
           </section>

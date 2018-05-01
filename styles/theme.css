@@ -60,6 +60,14 @@ body {
 .hero .box__inner h2 {
   font-family: 'Nova Flat', sans-serif;
 }
+.contact-form label {
+  color: #ddd;
+  font-family: 'Open Sans', sans-serif;
+}
+.contact-form input,
+.contact-form textarea {
+  color: #444;
+}
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
@@ -86,7 +94,6 @@ body {
   background-color: #0e0e0e;
   background-image: url("../images/grey_wash_wall.png");
   color: #fff;
-  box-shadow: 0 0 530px 125px rgba(0,0,0,0.4);
   position: relative;
 }
 #header .site-logo img {
@@ -104,7 +111,10 @@ body {
   margin-right: 5px;
 }
 #menu {
-  padding-top: 20px;
+  padding: 20px 0;
+}
+#menu-main-menu {
+  float: right;
 }
 #menu-main-menu > li:not(:first-child) {
   margin-left: 8px;
@@ -127,6 +137,14 @@ body {
 }
 .hero > .stripes.bottom {
   bottom: 0;
+}
+.hero .hero__header {
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+}
+.hero .hero__logo {
+  width: 50%;
 }
 .hero .hero__boxes {
   position: absolute;
@@ -160,8 +178,27 @@ body {
 .content-featured-image {
   height: 600px;
   box-shadow: inset 0 0 0 20px #8a867b;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center 0;
+  margin-top: -20px;
+}
+.gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .gallery__item {
+  width: 50%;
+}
+.gallery .gallery__caption {
+  text-align: center;
+  font-style: italic;
+}
+#content {
+  min-height: 64vh;
 }
 #footer {
   margin-top: 50px;
