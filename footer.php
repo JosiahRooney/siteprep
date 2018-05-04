@@ -7,5 +7,8 @@
     </footer>
   </div>
   <?php wp_footer(); ?>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.js"></script>
 </body>
 </html>

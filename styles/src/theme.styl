@@ -9,6 +9,8 @@ $stripes-height = 42px
 
 body
   background-color $body
+  &.home .site-logo
+    display none
 
 #header
   background-color #0e0e0e
@@ -104,15 +106,13 @@ body
   margin 0
   padding 0
   list-style none
-  display flex
-  flex-wrap wrap
 
   .gallery__item
-    width 50%
-
-  .gallery__caption
-    text-align center
-    font-style italic
+    width calc(550px - 10px)
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    margin 5px
 
 #content
   min-height 64vh

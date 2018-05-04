@@ -12,42 +12,32 @@
       </div>
     </div>
   </div>
+  <?php if (have_rows('hero_boxes')): ?>
   <div class="hero__boxes">
     <div class="container">
       <div class="row">
-        <div class="hero__box box col-md-4">
-          <div class="box__inner">
-            <h2 class="box__title">
-              <a href="#">Services <i class="fas fa-industry"></i></a>
-            </h2>
-            <div class="box__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque earum minima reprehenderit quisquam, vitae commodi sapiente repudiandae recusandae ipsam facilis. Tempora assumenda sapiente cupiditate deleniti minus fuga, nobis laborum ducimus!
-            </div><!-- .box__content -->
-          </div><!-- .box__inner -->
-        </div><!-- .hero__box .box .col-md-4 -->
-        <div class="hero__box box col-md-4">
-          <div class="box__inner">
-            <h2 class="box__title">
-              <a href="#">About Us <i class="fas fa-info-circle"></i></a>
-            </h2>
-            <div class="box__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque earum minima reprehenderit quisquam, vitae commodi sapiente repudiandae recusandae ipsam facilis. Tempora assumenda sapiente cupiditate deleniti minus fuga, nobis laborum ducimus!
-            </div><!-- .box__content -->
-          </div><!-- .box__inner -->
-        </div><!-- .hero__box .box .col-md-4 -->
-        <div class="hero__box box col-md-4">
-          <div class="box__inner">
-            <h2 class="box__title">
-              <a href="#">Contact <i class="fas fa-envelope"></i></a>
-            </h2>
-            <div class="box__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque earum minima reprehenderit quisquam, vitae commodi sapiente repudiandae recusandae ipsam facilis. Tempora assumenda sapiente cupiditate deleniti minus fuga, nobis laborum ducimus!
-            </div><!-- .box__content -->
-          </div><!-- .box__inner -->
-        </div><!-- .hero__box .box .col-md-4 -->
+        <?php while(have_rows('hero_boxes')) : the_row(); ?>
+        <?php 
+          $title = get_sub_field('hero_box_title'); // String
+          $content = get_sub_field('hero_box_content'); // String
+          $link = get_sub_field('hero_box_link'); // String
+          $icon = get_sub_field('hero_box_icon'); // String
+        ?>
+          <div class="hero__box box col-md-4">
+            <div class="box__inner">
+              <h2 class="box__title">
+                <a href="<?php echo $link; ?>"><?php echo $title; ?> <i class="fas <?php echo $icon; ?>"></i></a>
+              </h2>
+              <div class="box__content">
+                <?php echo $content; ?>
+              </div><!-- .box__content -->
+            </div><!-- .box__inner -->
+          </div><!-- .hero__box .box .col-md-4 -->
+        <?php endwhile; ?>
       </div><!-- .row -->
     </div><!-- .container -->
   </div><!-- .hero__boxes -->
+  <?php endif; ?>
   <div class="stripes bottom"></div>
 </section><!-- .hero -->
 <section id="primary-content" role="main" class="container">

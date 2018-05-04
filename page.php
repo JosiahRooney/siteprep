@@ -32,16 +32,24 @@
   <ul class="col-md-12 gallery">
   <?php while( have_rows('photo_gallery') ) : the_row(); ?>
     <?php if(get_sub_field('active')) : ?>
-      <li class="gallery__item">
-        <img src="<?php the_sub_field('gallery_image_url') ?>" alt="<?php if(get_sub_field('image_caption')) { the_sub_field('image_caption'); }?>">
-        <div class="gallery__caption wp-caption">
-          <p><?php if(get_sub_field('image_caption')) { the_sub_field('image_caption'); }?></p>
-        </div>
-      </li>
+      <img class="gallery__item" src="<?php the_sub_field('gallery_image_url') ?>" alt="<?php the_sub_field('image_caption') ?>" />
     <?php endif; ?>
   <?php endwhile; ?>
   </ul>
 </section>
+<script>
+  jQuery(function($){
+    $(document).ready(function(){
+      let $grid = $('.gallery').masonry({
+        itemSelector: '.gallery__item',
+        columnWidth: 550
+      });
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+      });
+    });
+  });
+</script>
 <?php endif; ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
